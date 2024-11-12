@@ -32,12 +32,12 @@ function func(arr: number[], x: number): number {
 
 let arr: number[] = [];
 let x: number;
-for (let i: number = 0; i < 100; i++) {
+for (let i: number = -50; i < 50; i++) {
   arr[i] = i;
 }
 
 for (let i: number = 0; i < 10; i++) {
-  x = Math.floor(Math.random() * 100);
+  x = Math.floor(Math.random() * 100) - 50;
 
   console.log(`Test ${i + 1} with number to find = ${x} :`);
   console.log("Found " + func(arr, x));
