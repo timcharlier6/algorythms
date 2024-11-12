@@ -22,18 +22,18 @@ function func(arr: number[], x: number): number {
       console.log(`Number of searches: ${counter}`);
       return arr[m];
     } else if (arr[m] > x) {
-      r = m;
+      r = m - 1;
     } else {
-      l = m;
+      l = m + 1;
     }
   } while (l <= r);
-  return arr[m];
+  return -1;
 }
 
 let arr: number[] = [];
 let x: number;
-for (let i: number = -50; i < 50; i++) {
-  arr[i] = i;
+for (let i: number = 0; i < 100; i++) {
+  arr[i] = i - 50;
 }
 
 for (let i: number = 0; i < 10; i++) {
